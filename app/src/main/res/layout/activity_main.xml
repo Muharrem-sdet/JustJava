@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/silver"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <EditText
+        android:id="@+id/my_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/my_edit_text_placeholder"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/toppings"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/my_edit_text" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/check_box1_text"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_toppings" />
+
+    <CheckBox
+        android:id="@+id/checkbox_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:text="@string/check_box2_text"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_1" />
+
+    <TextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_quantity"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/checkbox_2" />
+
+    <Button
+        android:id="@+id/decrease_button"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/silver"
+        android:clickable="false"
+        android:text="@string/decrease_button_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_quantity" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="0"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/decrease_button"
+        app:layout_constraintTop_toTopOf="@id/decrease_button" />
+
+    <Button
+        android:id="@+id/increase_button"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/increase_button_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_quantity" />
+
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/silver"
+        android:text="@string/order_button_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_total" />
+
+    <TextView
+        android:id="@+id/tv_order_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/order_summary_text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/decrease_button" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_summary" />
+
+    <TextView
+        android:id="@+id/tv_whipped"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_chocolate"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_whipped" />
+
+    <TextView
+        android:id="@+id/tv_quantity_result"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_chocolate" />
+
+    <TextView
+        android:id="@+id/tv_total"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_quantity_result" />
+</androidx.constraintlayout.widget.ConstraintLayout>

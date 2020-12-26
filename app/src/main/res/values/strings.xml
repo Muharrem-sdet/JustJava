@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="toppings">TOPPINGS</string>
+    <string name="my_edit_text_placeholder">Name</string>
+    <string name="check_box1_text">Whipped cream</string>
+    <string name="check_box2_text">Chocolate</string>
+    <string name="tv_quantity">QUANTITY</string>
+    <string name="decrease_button_text">-</string>
+    <string name="initial_quantity_value">0</string>
+    <string name="increase_button_text">+</string>
+    <string name="order_button_text">ORDER</string>
+    <string name="order_summary_text">ORDER SUMMARY</string>
+    <string name="tv_name_text">Name:</string>
+    <string name="tv_chocolate_text">Add chocolate?</string>
+    <string name="tv_whipped_text">Add whipped cream?</string>
+    <string name="tv_quantity_result_text">Quantity:</string>
+</resources>
